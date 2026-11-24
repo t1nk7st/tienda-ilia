@@ -27,3 +27,7 @@ jobs:
 
       - name: Comprobar el total
         run: java -cp out Main | grep "55[.,]00"
+
+      - name: Comprobar el descuento
+        run: |
+          java -cp out Main | grep -E '^Con un 10 % de descuento: 49[.,]50 €$'
